@@ -98,3 +98,6 @@ tags
 .ctags
 
 .vscode
+
+# Data
+utils/data

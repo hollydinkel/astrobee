@@ -1,12 +1,12 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 
 import numpy as np
 # from pyquaternion import Quaternion
 import os
 
 
-img_dir = f"./src/utils/20230419/bayer/survey1"
-poses_dir = f"./src/utils/20230419/pose/survey1"
+img_dir = "./src/utils/data/20230419/bayer/survey2"
+poses_dir = "./src/utils/data/20230419/pose/survey2"
 
 pose_list = [int(os.path.splitext(file)[0]) for file in os.listdir(poses_dir)]
 img_list = [int(os.path.splitext(file)[0]) for file in os.listdir(img_dir)]

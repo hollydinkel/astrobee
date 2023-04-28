@@ -34,14 +34,11 @@ def main():
 
     bag = rosbag.Bag(args.bag_file, "r")
     bridge = CvBridge()
-    count = 3631
     for topic, msg, t in bag.read_messages(topics=[args.image_topic]):
         cv_img = bridge.imgmsg_to_cv2(msg, desired_encoding="passthrough")
 
         cv2.imwrite(os.path.join(output_dir, "%03i.jpg" % count), cv_img)
         print("Wrote image %i" % count)
-
-        count += 1
 
     bag.close()
 

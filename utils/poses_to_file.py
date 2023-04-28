@@ -26,11 +26,11 @@ def main():
     # parser.add_argument("pose", help="TF topic.")
 
     # args = parser.parse_args()
-    bag_dir = f"./src/utils/20230419/bags/survey2/"
+    bag_dir = f"./src/utils/data/20230419/bags/survey2/"
     print(bag_dir)
 
-    output_dir = f"./src/utils/20230419/bayer/survey2"
-    output_dir_poses = f"./src/utils/20230419/pose/survey2"
+    output_dir = f"./src/utils/data/20230419/bayer/survey2"
+    output_dir_poses = f"./src/utils/data/20230419/pose/survey2"
     try: os.mkdir(output_dir)
     except FileExistsError:
         print(f"{output_dir} already exists!")
