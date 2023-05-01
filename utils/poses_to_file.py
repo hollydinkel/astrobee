@@ -20,17 +20,11 @@ def main():
     """Extract a folder of images from a rosbag.
     """ 
 
-    # parser = argparse.ArgumentParser(description="Extract images from a ROS bag.")
-    # parser.add_argument("bag_file", help="Input ROS bag.")
-    # parser.add_argument("image", help="Image topic.")
-    # parser.add_argument("pose", help="TF topic.")
-
-    # args = parser.parse_args()
-    bag_dir = f"./src/utils/data/20230419/bags/survey2/"
+    bag_dir = f"./src/utils/data/20230419/bags/survey3"
     print(bag_dir)
 
-    output_dir = f"./src/utils/data/20230419/bayer/survey2"
-    output_dir_poses = f"./src/utils/data/20230419/pose/survey2"
+    output_dir = f"./src/utils/data/20230419/bayer/survey3"
+    output_dir_poses = f"./src/utils/data/20230419/pose/survey3"
     try: os.mkdir(output_dir)
     except FileExistsError:
         print(f"{output_dir} already exists!")
@@ -39,8 +33,6 @@ def main():
         print(f"{output_dir_poses} already exists!")
 
     bridge = CvBridge()
-
-    # bag = rosbag.Bag(args.bag_file, "r")
 
     # # nav_cam_tf = transform(vec3(0.1157+0.002, -0.0422, -0.0826), quat4(-0.46938154, -0.52978318, -0.5317378, -0.46504373))
     

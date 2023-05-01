@@ -4,10 +4,10 @@ import xml.etree.ElementTree as ET
 import os
 from numpy import loadtxt
 
-poses_dir = './src/data/20230419/pose/survey2/'
+poses_dir = './src/utils/data/20230419/pose/survey2/'
 poses = os.listdir(poses_dir)
 
-tree = ET.parse('cameras.xml')
+tree = ET.parse('./src/utils/cameras.xml')
 root = tree.getroot()
 separator = " "
 
