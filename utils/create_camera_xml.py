@@ -4,7 +4,8 @@ import xml.etree.ElementTree as ET
 import os
 from numpy import loadtxt
 
-poses_dir = './src/utils/data/20230419/pose/survey2/'
+survey = "survey4"
+poses_dir = f'./src/utils/data/20230419/pose/{survey}'
 poses = os.listdir(poses_dir)
 
 tree = ET.parse('./src/utils/cameras.xml')
@@ -28,4 +29,4 @@ for i,pose in enumerate(poses):
     root[0][1][i].set('enabled','true')
     root[0][1][i][0].text = separator.join(listed)
 
-tree.write('test.xml')    
+tree.write(f'/home/hdinkel/change_ws/src/fast_change_detection/example/dataset/granite_{survey}/cameras.xml')    

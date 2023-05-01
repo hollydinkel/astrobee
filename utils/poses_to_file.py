@@ -20,11 +20,11 @@ def main():
     """Extract a folder of images from a rosbag.
     """ 
 
-    bag_dir = f"./src/utils/data/20230419/bags/survey3"
+    bag_dir = f"./src/utils/data/20230419/bags/survey1"
     print(bag_dir)
 
-    output_dir = f"./src/utils/data/20230419/bayer/survey3"
-    output_dir_poses = f"./src/utils/data/20230419/pose/survey3"
+    output_dir = f"./src/utils/data/20230419/bayer/survey1"
+    output_dir_poses = f"./src/utils/data/20230419/pose/survey1"
     try: os.mkdir(output_dir)
     except FileExistsError:
         print(f"{output_dir} already exists!")

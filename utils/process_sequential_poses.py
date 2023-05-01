@@ -5,8 +5,8 @@ import numpy as np
 import os
 
 
-img_dir = "./src/utils/data/20230419/bayer/survey2"
-poses_dir = "./src/utils/data/20230419/pose/survey2"
+img_dir = "./src/utils/data/20230419/bayer/survey1"
+poses_dir = "./src/utils/data/20230419/pose/survey1"
 
 pose_list = [int(os.path.splitext(file)[0]) for file in os.listdir(poses_dir)]
 img_list = [int(os.path.splitext(file)[0]) for file in os.listdir(img_dir)]
