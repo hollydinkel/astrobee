@@ -2,11 +2,21 @@
 # from xml.dom import minidom
 import xml.etree.ElementTree as ET
 import os
+import argparse
 from numpy import loadtxt
 
-survey = "survey4"
-poses_dir = f'./src/utils/data/20230419/pose/{survey}'
+parser = argparse.ArgumentParser(description="Process sequential poses.")
+parser.add_argument("survey", help="Indicate survey number")
+parser.add_argument("date", help="Dataset date.")
+
+args = parser.parse_args()
+
+poses_dir = f'./src/utils/data/{args.date}/pose/survey{args.survey}'
 poses = os.listdir(poses_dir)
+fastcd_data_dir = f'/home/hdinkel/change_ws/src/fast_change_detection/example/dataset/granite_groundtruth_survey{args.survey}'
+try: os.mkdir(fastcd_data_dir)
+except FileExistsError:
+    print(f"{fastcd_data_dir} already exists!")
 
 tree = ET.parse('./src/utils/cameras.xml')
 root = tree.getroot()
@@ -20,7 +30,6 @@ for i,pose in enumerate(poses):
             row = line.split()
             val = [str(a) for a in row]
             l.append(val)
-        print(l)
         listed = [item for val in l for item in val]
 
     root[0][1][i].set('id',f'{i}')
@@ -29,4 +38,4 @@ for i,pose in enumerate(poses):
     root[0][1][i].set('enabled','true')
     root[0][1][i][0].text = separator.join(listed)
 
-tree.write(f'/home/hdinkel/change_ws/src/fast_change_detection/example/dataset/granite_{survey}/cameras.xml')    
+tree.write(os.path.join(fastcd_data_dir,'cameras.xml'))    

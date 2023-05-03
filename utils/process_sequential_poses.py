@@ -1,12 +1,18 @@
 #! /usr/bin/env python3
 
 import numpy as np
-# from pyquaternion import Quaternion
 import os
+import argparse
 
 
-img_dir = "./src/utils/data/20230419/bayer/survey1"
-poses_dir = "./src/utils/data/20230419/pose/survey1"
+parser = argparse.ArgumentParser(description="Process sequential poses.")
+parser.add_argument("survey", help="Indicate survey number")
+parser.add_argument("date", help="Dataset date.")
+
+args = parser.parse_args()
+
+img_dir = f"./src/utils/data/{args.date}/bayer/survey{args.survey}"
+poses_dir = f"./src/utils/data/{args.date}/pose/survey{args.survey}"
 
 pose_list = [int(os.path.splitext(file)[0]) for file in os.listdir(poses_dir)]
 img_list = [int(os.path.splitext(file)[0]) for file in os.listdir(img_dir)]

@@ -20,11 +20,17 @@ def main():
     """Extract a folder of images from a rosbag.
     """ 
 
-    bag_dir = f"./src/utils/data/20230419/bags/survey1"
+    parser = argparse.ArgumentParser(description="Process sequential poses.")
+    parser.add_argument("survey", help="Indicate survey number")
+    parser.add_argument("date", help="Dataset date.")
+
+    args = parser.parse_args()
+
+    bag_dir = f"./src/utils/data/{args.date}/bags/survey{args.survey}"
     print(bag_dir)
 
-    output_dir = f"./src/utils/data/20230419/bayer/survey1"
-    output_dir_poses = f"./src/utils/data/20230419/pose/survey1"
+    output_dir = f"./src/utils/data/{args.date}/bayer/survey{args.survey}"
+    output_dir_poses = f"./src/utils/data/{args.date}/pose/survey{args.survey}"
     try: os.mkdir(output_dir)
     except FileExistsError:
         print(f"{output_dir} already exists!")
@@ -48,9 +54,9 @@ def main():
         data = {'pose': [],
                 'pose_time': [],
                 'image_time': []}
-        for (topic, msg, t) in bag.read_messages(topics=['/gnc/ekf','/hw/cam_nav_bayer']):
+        for (topic, msg, t) in bag.read_messages(topics=['/ground_truth/gnc/ekf','/hw/cam_nav_bayer']):
             
-            if topic == '/gnc/ekf':
+            if topic == '/ground_truth/gnc/ekf':
                 pose = msg.pose
                 trans = np.array([pose.position.x, pose.position.y, pose.position.z])
                 quat_xyzw = [pose.orientation.x,pose.orientation.y,pose.orientation.z,pose.orientation.w]

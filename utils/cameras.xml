@@ -84,25 +84,43 @@
       <camera id="21" label="Image21.JPG" sensor_id="0" enabled="true">
         <transform>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</transform>
       </camera>
-      <camera id="22" label="Image21.JPG" sensor_id="0" enabled="true">
+      <camera id="22" label="Image22.JPG" sensor_id="0" enabled="true">
         <transform>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</transform>
       </camera>
-        <camera id="23" label="Image21.JPG" sensor_id="0" enabled="true">
+        <camera id="23" label="Image23.JPG" sensor_id="0" enabled="true">
         <transform>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</transform>
       </camera>
-        <camera id="24" label="Image21.JPG" sensor_id="0" enabled="true">
+        <camera id="24" label="Image24.JPG" sensor_id="0" enabled="true">
         <transform>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</transform>
       </camera>
-        <camera id="25" label="Image21.JPG" sensor_id="0" enabled="true">
+        <camera id="25" label="Image25.JPG" sensor_id="0" enabled="true">
         <transform>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</transform>
       </camera>
-        <camera id="26" label="Image21.JPG" sensor_id="0" enabled="true">
+        <camera id="26" label="Image26.JPG" sensor_id="0" enabled="true">
         <transform>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</transform>
       </camera>
-        <camera id="27" label="Image21.JPG" sensor_id="0" enabled="true">
+        <camera id="27" label="Image27.JPG" sensor_id="0" enabled="true">
         <transform>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</transform>
       </camera>
-        <camera id="28" label="Image21.JPG" sensor_id="0" enabled="true">
+        <camera id="28" label="Image28.JPG" sensor_id="0" enabled="true">
+        <transform>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</transform>
+      </camera>
+        <camera id="29" label="Image29.JPG" sensor_id="0" enabled="true">
+        <transform>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</transform>
+      </camera>
+        <camera id="30" label="Image30.JPG" sensor_id="0" enabled="true">
+        <transform>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</transform>
+      </camera>
+        <camera id="31" label="Image31.JPG" sensor_id="0" enabled="true">
+        <transform>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</transform>
+      </camera>
+        <camera id="32" label="Image32.JPG" sensor_id="0" enabled="true">
+        <transform>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</transform>
+      </camera>
+        <camera id="33" label="Image33.JPG" sensor_id="0" enabled="true">
+        <transform>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</transform>
+      </camera>
+        <camera id="34" label="Image34.JPG" sensor_id="0" enabled="true">
         <transform>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</transform>
       </camera>
     </cameras>
